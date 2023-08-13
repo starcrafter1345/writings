@@ -7,6 +7,7 @@
   --secondary-color: #ff7575;
   --text-color: #0f1217;
   --controls-color: #909090;
+  --cards-bg-color: #fff;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
   font-family: Poppins, sans-serif;
   color: var(--primary-color);
   font-weight: 300;
+  font-size: 16px;
 }
 
 .container {
@@ -79,39 +81,79 @@ body {
   background-color: #4d4d4d;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-
-  color: var(--controls-color);
-  font-family: Recursive;
-  font-size: 27px;
-  font-style: italic;
-  font-weight: 400;
-
-  margin-top: 16px;
-
-  .nav__img:first-child {
-    margin-right: 13px;
-  }
-
-  .nav__topics {
+.main {
+  .main__nav,
+  .nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
 
-    margin-left: 41px;
+    color: var(--controls-color);
+    font-family: Recursive;
+    font-size: 27px;
+    font-style: italic;
+    font-weight: 400;
 
-    /* .nav__topic {
-      margin-left: 36px;
-    } */
+    margin-top: 16px;
 
-    .nav__topic:first-child {
-      margin-left: 0px;
+    .nav__img:first-child {
+      margin-right: 13px;
+    }
+
+    .nav__topics {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-left: 41px;
+
+      .nav__topic:first-child {
+        margin-left: 0px;
+      }
     }
   }
-}
 
-.main {
+  .main__cards,
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 390px);
+    grid-template-rows: repeat(3, 439px);
+    gap: 37px;
+
+    margin-top: 111px;
+
+    .cards__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      background-color: var(--cards-bg-color);
+      border-radius: 22px;
+
+      padding: 26px;
+
+      color: var(--text-color);
+
+      font-weight: 400;
+
+      .cards__header {
+        font-size: 19px;
+        font-weight: 600;
+      }
+
+      .cards__footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .cards__dot {
+          margin: 0 26.5px 0 17px;
+          width: 3px;
+          height: 3px;
+          border-radius: 100%;
+          background-color: #0f1217;
+        }
+      }
+    }
+  }
 }
