@@ -102,8 +102,8 @@ body {
     .nav__topics {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
       align-items: center;
+      gap: 36px;
 
       margin-left: 41px;
 
@@ -153,6 +153,54 @@ body {
           border-radius: 100%;
           background-color: #0f1217;
         }
+      }
+    }
+  }
+
+  .main__pages,
+  .pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 111px auto 0 auto;
+
+    width: 478px;
+
+    color: var(--controls-color);
+    font-family: Recursive;
+    font-size: 25px;
+    font-weight: 400;
+    font-style: italic;
+    .pages__controls {
+      color: var(--controls-color);
+
+      text-decoration: none;
+    }
+
+    .pages__list {
+      display: flex;
+      flex-direction: row;
+      gap: 35px;
+
+      .pages__number-pages_active {
+        position: relative;
+        color: var(--secondary-color);
+        font-weight: 700;
+      }
+
+      .pages__number-pages_active::before {
+        position: absolute;
+
+        content: "";
+
+        width: 54px;
+        height: 3px;
+
+        background-color: var(--secondary-color);
+
+        margin-top: -17px;
+        margin-left: -16px;
       }
     }
   }
